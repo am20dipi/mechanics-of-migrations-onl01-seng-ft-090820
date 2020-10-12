@@ -7,6 +7,11 @@ class CreateArtists < ActiveRecord::Migration[5.2] #creating a class that inheri
   
   def change
     create_table :artists do |t|
-      
-    end
+      t.string :name
+      t.string :genre
+      t.integer :age
+      t.string :hometown
+    end #on the left we give the datatype and on the right we give the name of each column 
+    #AR generates the PK column for us and for each row added, a key will be auto-incremeneted
+  end
 end
